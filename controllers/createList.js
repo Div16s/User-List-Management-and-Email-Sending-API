@@ -1,6 +1,5 @@
 const List = require('../models/List');
 
-// Controller function for creating a new list
 const createList = async (req, res) => {
     try {
         const { title, customProperties } = req.body;
