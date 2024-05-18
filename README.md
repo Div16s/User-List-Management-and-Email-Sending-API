@@ -38,7 +38,6 @@ This is a Node.js backend application designed to manage a list of users with cu
     MONGO_URI=your_mongodb_connection_string
     EMAIL=your_email_address
     PASSWORD=your_email_password
-    BASE_URL=https://your-deployed-app-url.com
     ```
 
 4. Start the application:
