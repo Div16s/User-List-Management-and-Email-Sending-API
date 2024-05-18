@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "518f372b-5959-45e2-8d4a-4aa19e504ed7",
+		"name": "User List Management and Email Sending API",
+		"description": "# 1\\. **CREATE LIST**\n\n- **Request Name**: Create List\n- **Method**: POST\n- **URL**: `{baseUrl}/api/create-list`\n- **Headers**:\n    - Content-Type: application/json\n- **Body**: (raw JSON)\n    \n\n```\n{\n  \"title\": \"Student Details\",\n  \"customProperties\": [\n    {\n      \"title\": \"City\",\n      \"fallbackValue\": \"Unknown\"\n    },\n    {\n      \"title\": \"Subscription Date\",\n      \"fallbackValue\": \"\"\n    }\n  ]\n}\n\n ```\n\n# 2\\. **CSV FILE UPLOAD**\n\n- **Request Name**: Upload CSV file to Add Users\n- **Method**: POST\n- **URL**: `{baseUrl}/api/{listId}/add-users`\n- **Headers**:\n    - Content-Type: multipart/form-data\n- **Body**: (form-data)\n    - Key: `file` (type: File)\n    - Value: Choose your CSV file\n\n# 3\\. SEND EMAILS\n\n- **Request Name**: Send Emails\n- **Method**: POST\n- **URL**: `{baseUrl}/api/{listId}/send-emails`\n- **Headers**:\n    - Content-Type: application/json\n\n# 4\\. UNSUBSCRIBE\n\n- **Request Name**: Unsubscribe User\n- **Method**: GET (since the user clicks on a link in the email)\n- **URL**: `{baseUrl}/api/unsubscribe/{userId}`",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27401004"
+	},
+	"item": [
+		{
+			"name": "DATA UPLOAD USING CSV FILE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1ef1511f-4ee7-43f0-8b71-8260a88befdc"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/{{listId}}/add-users",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"{{listId}}",
+						"add-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unsubscribe User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/unsubscribe/{{userId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"unsubscribe",
+						"{{userId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/{{listId}}/send-emails",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"{{listId}}",
+						"send-emails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Student Details\",\r\n  \"customProperties\": [\r\n    {\r\n      \"title\": \"City\",\r\n      \"fallbackValue\": \"Unknown\"\r\n    },\r\n    {\r\n      \"title\": \"Subscription Date\",\r\n      \"fallbackValue\": \"\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/api/create-list",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"create-list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
