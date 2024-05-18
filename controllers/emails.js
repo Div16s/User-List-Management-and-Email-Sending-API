@@ -30,6 +30,7 @@ const sendMail = async (req, res) => {
     }
 
     const emails = users.map(user => {
+        const unsubscribeLink = `https://user-list-management-and-email-sending.onrender.com/api/unsubscribe/${user._id}`;
         let personalizedBody = body;
         Object.keys(user.customProperties).forEach(key => {
             const regex = new RegExp(`\\[${key}\\]`, 'g');
@@ -38,7 +39,9 @@ const sendMail = async (req, res) => {
 
         personalizedBody = personalizedBody.replace(/\[name\]/g, user.name)
             .replace(/\[email\]/g, user.email)
-            .replace(/\[id\]/g, user._id.toString());
+
+        const unsubscribeHtml = `<a href="${unsubscribeLink}" style="color:red; font-weight:bold;">here</a>`;
+        personalizedBody = personalizedBody.replace('[here]', unsubscribeHtml);
 
         return {
             from: process.env.EMAIL,
