@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-const baseUrl = process.env.BASE_URL;
+const baseUrl = "https://user-list-management-and-email-sending.onrender.com";
 const subject = 'Welcome to MathonGo!';
 
 const sendMail = async (req, res) => {
