@@ -11,6 +11,6 @@ const upload = multer({ dest: 'uploads/' });
 router.post('/create-list', createList);
 router.post('/:listId/users', upload.single('file'), csvUpload);
 router.post('/:listId/send-emails', emails);
-router.post('/unsubscribe/:userId', unSubscribe);
+router.get('/unsubscribe/:userId', unSubscribe);
 
 module.exports = router;
