@@ -113,11 +113,6 @@ A Postman collection is included in the repository. Import the `postman_collecti
 - `base_url`: The base URL of your deployed application.
 
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
