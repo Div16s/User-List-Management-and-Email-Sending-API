@@ -1,0 +1,20 @@
+{
+  "name": "user-list-management-and-email-sending-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Divyankar Shah",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "fast-csv": "^5.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.13",
+    "util": "^0.12.5",
+    "uuid": "^9.0.1"
+  }
+}
