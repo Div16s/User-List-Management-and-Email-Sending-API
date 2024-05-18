@@ -24,8 +24,8 @@ This is a Node.js backend application designed to manage a list of users with cu
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/user-list-management.git
-    cd user-list-management
+    git clone https://github.com/Div16s/User-List-Management-and-Email-Sending-API.git
+    cd User-List-Management-and-Email-Sending-API
     ```
 
 2. Install dependencies:
