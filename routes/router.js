@@ -9,7 +9,7 @@ const router = express.Router();
 const upload = multer({ dest: 'uploads/' });
 
 router.post('/create-list', createList);
-router.post('/:listId/users', upload.single('file'), csvUpload);
+router.post('/:listId/upload-users', upload.single('file'), csvUpload);
 router.post('/:listId/send-emails', emails);
 router.get('/unsubscribe/:userId', unSubscribe);
 

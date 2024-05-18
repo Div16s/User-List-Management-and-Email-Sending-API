@@ -27,7 +27,6 @@ const csvUpload = async (req, res) => {
             res.status(400).json({ error: 'CSV parsing error' });
         })
         .on('data', row => {
-            // Check if the required fields are present
             if (!row.name || !row.email) {
                 console.log('Missing required fields:', row);
                 errors.push({ row, error: 'Missing required fields' });
