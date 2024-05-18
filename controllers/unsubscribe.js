@@ -14,7 +14,7 @@ const unSubscribe = async (req, res) => {
     await user.save();
 
     res.status(200).json({ 
-        message: 'You have successfully unsubscribed from our emails.' 
+        message: 'You have successfully unsubscribed from our email services.' 
     });
 };
 
