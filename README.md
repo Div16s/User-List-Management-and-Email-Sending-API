@@ -97,7 +97,7 @@ This is a Node.js backend application designed to manage a list of users with cu
     ```
 
 ### 4. Unsubscribe
-- **Endpoint**: `POST /api/unsubscribe/:userId`
+- **Endpoint**: `GET /api/unsubscribe/:userId`
 - **Description**: Unsubscribes the user from the list.
 - **Response**:
     ```json
