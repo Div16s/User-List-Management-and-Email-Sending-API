@@ -108,9 +108,9 @@ This is a Node.js backend application designed to manage a list of users with cu
 
 ## Postman Collection
 
-A Postman collection is included in the repository. Import the `postman_collection.json` file into Postman to test the API endpoints. Set up an environment in Postman with the following variables:
+A Postman collection is included in the repository. Import the `User List Management and Email Sending API.postman_collection` file into Postman to test the API endpoints. Set up an environment in Postman with the following variables:
 
-- `base_url`: The base URL of your deployed application.
+- `baseUrl`: The base URL of your deployed application.
 
 
 ## Contributing
